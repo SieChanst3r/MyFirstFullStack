@@ -15,7 +15,7 @@ import axios from "axios"
         name: "UpdatePost",
         data() {
             return {
-                postsContent,
+                postsContent: "",
                 postsName: "",
                 
             };

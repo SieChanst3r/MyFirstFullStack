@@ -91,7 +91,8 @@ def posts():
         conn = None
         cursor = None  
         posts_id = request.json.get('id')
-        rows = None                  
+        rows = None 
+        try:                 
             conn = mariadb.connect(host=dbcreds.host, password=dbcreds.password, user=dbcreds.user, port=dbcreds.port, database=dbcreds.database)
             cursor = conn.cursor()
             cursor.execute("DELETE FROM posts WHERE id=?", [posts_id,])
