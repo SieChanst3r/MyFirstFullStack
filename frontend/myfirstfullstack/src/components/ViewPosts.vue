@@ -5,8 +5,8 @@
             <h2> {{ post[1] }} </h2>
             <p> {{ post[0] }} </p>
             <p> {{ post[3] }} </p>
-            
-
+            <update-post :postsid="post[2]"></update-post>
+            <delete-post :postsid="post[2]"><delete-post>
 
         </div>
     </div>
@@ -14,6 +14,8 @@
 
 <script>
 import axios from "axios";
+import UpdatePost from "./UpdatePost.vue"
+import DeletePost from "./DeletePost.vue"
 
     export default {
         data() {
@@ -22,7 +24,8 @@ import axios from "axios";
             };
         },
         components: {
-            
+            UpdatePost,
+            DeletePost,
         },
         methods: {
             getPosts: function() {

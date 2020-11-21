@@ -9,14 +9,12 @@
 <script>
 import CreatePost from './components/CreatePost.vue'
 import ViewPosts from "./components/ViewPosts.vue"
-import CreatePost from "./CreatePost.vue"
 
 
 export default {
   name: 'App',
   components: {
     ViewPosts,
-    CreatePost,
     CreatePost,
 
   }
